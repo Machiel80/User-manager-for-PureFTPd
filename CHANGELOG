@@ -1,0 +1,124 @@
+Version 2.2 (1-4-2017)
+
+- PHP code now 'MySQL Improved Extension' compatible
+- Removed the old 'database upgrade' option from the install.php file
+- Fixed incompatibility issues from the previous version of php (version 5) to PHP version 7
+- Did a lot of code improvement, code suggestion from Marcin Dorota are addopted
+
+Version 2.1 (29-9-2005)
+
+Korean translation added.
+Bulgarian translation added.
+Chinese translation added.
+Italian translation added.
+Changed both style sheets, default and orange. 
+  Reduce the number of font types to 1 single font Verdana.
+  Improved the out lining of attributes like text, input boxes, and icon’s / images.
+Add a image ‘ftpuser_gray.gif’, used when u disable (locked) an ftp account.
+Saves the offset (location) of the horizontal and vertical scrollbar, 
+  useful when the page doesn’t fit entirely on the screen and you use the file browser.
+Fixed a problem with the file size (function filesize from PHP) in the file browser, 
+  some files larger that 2GB shows unexpected results. 
+Added a cross-browser Tooltip JavaScript to create tooltips, 
+  previous versions had problems with the limitation of characters of the HTML title tag.
+
+Version 2.0 (20-6-2005)
+
+Upgrade the database for extra functionality (see below)
+- ALTER TABLE ftpusers.users ADD Status enum('0','1') NOT NULL default '1';
+- ALTER TABLE ftpusers.users ADD Ipaddress varchar(15) NOT NULL default '*';
+- ALTER TABLE ftpusers.users ADD Comment tinytext;
+- ALTER TABLE ftpusers.users ADD ULRatio smallint(5) default '1';
+- ALTER TABLE ftpusers.users ADD DLRatio smallint(5) default '1';
+- ALTER TABLE ftpusers.users ADD UNIQUE KEY User (User);
+Quota support, this option is optional.
+- Restriction of the maximal number of files a user can store in his account.
+- Restriction of total size (Mb) of files a user can store in his account.
+Ratio support, this option is optional.
+- For example <1:2> stands for: First upload 4 Mb than download 8 Mb, <0:0> is off
+Added ip address restriction support, 
+- Restrict a account to a single client (ip address) or allows anyone.
+Added a Notes field, this allows the administrator to simply write some notes about an account.
+Added a user friendly directory browser, allows the administrator to easily choose a home directory for an FTP account.
+- constants.php and files.php are part of the directory browser
+Reorganised the language files, many words and senses are added, 
+system messages like ‘database not found’ are not longer translated, just only the user interface.
+Removed old languages, out of date.
+New available languages are:
+- English
+- Dutch
+- French
+- Japanese
+- Spanish
+- Slovenian
+Added a user friendly installation wizard (install.php) this allows the administrator to easily install this software. Functions that are embedded:
+- Install, upgrade, or change the database with tables.
+- Easily configure the ‘User manager for PureFTPd’, just click and type the options you want.
+- Easily change or add users that are allowed to use the ‘User manager for PureFTPd’.
+- Generates the configuration file for PureFTPd
+Changed the stylesheets.
+
+Version 1.4.0 (14-9-2004)
+
+Changed the language system, every language has now his own language file.
+Japanese, Simplified Chinese, Swedish, Polish, Italian translations added.
+Clean up some source code, for example removed all Dutch code and comment.
+Make all the icons and images transparent.
+Makes the style sheets more useful, add 1 style sheet.
+Improved failure / error system, the user will now be well informed about possible problems with the connection or the database itself.
+Changed project name from 'User Management for PureFTPd server' to 'User manager for PureFTPd'
+
+Version 1.3.1 (29-3-2004)
+
+Danish translation added.
+Norwegian translation added.
+When the user canceled a delete action the document will not reload. (javascript)
+Title information added by the buttons: Edit, Delete and Open.
+
+Version 1.3.0 (14-3-2004)
+
+German translation added.
+Help-function now uses title-tags. (will be shown in Mozilla and Konqueror) 
+Selecting uid/gid out of the combobox will not cause reload the document. (javascript)
+Correct the variable name $COREAN to $KOREAN
+
+Version 1.2.8 (28-2-2004)
+
+Correct the variable name $ENGLISCH to $ENGLISH.
+Added version number into the login page (index.php).
+Replaced the ‘error message’ from the login page outside the html table.
+Bug fix with the session variable ‘Login’ on line 35 from index.php.
+Added the text 'Don’t change this if you are using the default database.' in config.php
+Removed the mouse over option by the 2 blue arrows from admin.php.
+
+Version 1.2.7
+
+Hungarian translation added.
+Correction in translate line 21 from the Korean translation.
+Correction in translate line 3, 8 and 31 from the Dutch translation.
+Added the 'wheel' group in the BlacklistGroups array from the config.php file.
+
+Version 1.2.6
+
+Korean translation added.
+French translation added.
+
+Version 1.2.5
+
+1. Spanish translation added.
+2. Change the variable name ‘$FTPAdress’ into ‘$FTPAddress’
+3. Add the values ‘UsersFile’, ‘GroupFile’, ’BlacklistUsers’ and ’BlacklistGroups’ to the config.php file.
+4. Created 2 dropdown menus with a list of Unix users and a list of Unix groups.
+
+Version 1.2.4
+
+Russian translation added.
+Translate the 'save' button in the 4 available languages.
+
+Version 1.2.3
+
+Language brazilian portuguese added. 
+
+Version 1.2.2
+
+First public version.
