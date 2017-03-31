@@ -4,7 +4,8 @@ Version 2.2 (1-4-2017)
 - Removed the old 'database upgrade' option from the install.php file
 - Fixed incompatibility issues from the previous version of php (version 5) to PHP version 7
 - Did a lot of code improvement, code suggestion from Marcin Dorota are addopted
-- 
+- Add Hungarian translated by Gabor Torok ( Larry )
+
 
 Version 2.1 (29-9-2005)
 
