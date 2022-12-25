@@ -5,7 +5,7 @@
 
   // Global
   $Translate[0]  = "User manager for PureFTPd";
-  $Translate[1]  = "Version 2.2";
+  $Translate[1]  = "Version 2.5";
 
   // Default username
   $Translate[10] = "name";
@@ -67,5 +67,3 @@
   $Translate[96] = "Restriction of total size (Mb) of files a user can store in his account.";
   $Translate[97] = "For example <1:2> stands for: First upload 4 Mb than download 8 Mb, <0:0> is off";
   $Translate[98] = "Restrict this account to a single client (ip address) or anyone (*)";
-
-?>

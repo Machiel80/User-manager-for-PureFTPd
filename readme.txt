@@ -1,6 +1,6 @@
-'User manager for PureFTPd' is made by M.Mastenbroek 2002 - 2017
+'User manager for PureFTPd' is made by M.Mastenbroek 2002 - 2017, dnsb 2022
 For more info look at http://machiel.generaal.net
-Version 2.2
+Version 2.5
 
 Installation:
 

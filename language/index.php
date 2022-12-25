@@ -1,15 +1,15 @@
 <?php
 
-	/* 'User manager for PureFTPd' is made by M.Mastenbroek 2002 - 2017
+	/* 'User manager for PureFTPd' is made by M.Mastenbroek 2002 - 2017, dnsb 2022
 	 *  For more info look at http://machiel.generaal.net
-	 *  Version 2.2
+	 *  Version 2.5
 	 *
 	 *
-	 *  I can only speak my natural language (Dutch) and a little bit English, so if people
+	 *  I can only speak my natural language (Dutch) and a little English, so if people
 	 *  use my script and have the time, knowledge and the spitted to add a language
-	 *  feel yourself free. I think the syntax speaks for itself. If you added a language or you have
+	 *  feel yourself free. I think the syntax speaks for itself. If you added a language, or you have
 	 *  questions about it, you can contact me at machiel.mastenbroek@gmail.com, if
-	 *  that doesn’t work check my website how to contact me.
+	 *  that doesn't work check my website how to contact me.
 	 */
 
 	$LFile = strtolower($LANG).".php";
@@ -22,5 +22,3 @@
 
 	/* Read the language file */
 	require("language/".$LFile);
-
-?>

@@ -1,11 +1,11 @@
 <?php
   // Dutch language file
 
-  $CharSet = "iso-8859-1";
+  $CharSet = "UTF-8";
 
   // Global
   $Translate[0]  = "User manager for PureFTPd";
-  $Translate[1]  = "Versie 2.2";
+  $Translate[1]  = "Versie 2.5";
 
   // Default username
   $Translate[10] = "naam";
@@ -67,5 +67,3 @@
   $Translate[96] = "Restrictie op de totale grote van bestanden (Mb) dat een gebruiker kan opslaan in zijn ftp account.";
   $Translate[97] = "Voorbeeld <1:2> staat voor: Upload eerst 4 Mb waarna je 8 Mb mag downloaden, <0:0> is uit.";
   $Translate[98] = "Beperk de toegang van dit account tot een enkele gebruiker (ip adres) of iedereen (*)";
-
-?>
