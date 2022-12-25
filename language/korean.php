@@ -1,71 +1,69 @@
 <?php
-  // Korean translated by Sung-Pyo Cho(joseph@fineyes.com)
+// Korean translated by Sung-Pyo Cho(joseph@fineyes.com)
 
-  $CharSet = "euc-kr";
+$CharSet = "UTF-8";
 
-  // Global
-  $Translate[0]  = "PureFTPd »ç¿ëÀÚ °ü¸®";
-  $Translate[1]  = "¹öÀü 2.2";
+// Global
+$Translate[0]  = "PureFTPd ì‚¬ìš©ìž ê´€ë¦¬";
+$Translate[1]  = "ë²„ì „ 2.5";
 
-  // Default username
-  $Translate[10] = "¾ÆÀÌµð";
+// Default username
+$Translate[10] = "ì•„ì´ë””";
 
-  // System messages
-  $Translate[20] = "»ç¿ëÀÚ ID³ª ¾ÏÈ£¸¦ Àß¸ø ¼±ÅÃÇÏ¿´½À´Ï´Ù.";
-  $Translate[21] = "¾ÏÈ£°¡ Á¤È®ÇÏÁö ¾ÊÀ¸¹Ç·Î, º¯°æÇÑ »çÇ×À» ÀúÀåÇÏÁö ¾Ê½À´Ï´Ù.";
-  $Translate[22] = "¾ÏÈ£´Â Á¦¿ÜÇÏ°í ³ª¸ÓÁö¸¸ ÀúÀåÇÕ´Ï´Ù.";
-  $Translate[23] = "°ªÀ» ÀúÀåÇÏ¿´½À´Ï´Ù.";
-  $Translate[24] = "´ÙÀ½ÀÇ ftp »ç¿ëÀÚ, ";
-  $Translate[25] = "¸¦(À») »èÁ¦ÇÏ°Ú½À´Ï´Ù";
-  $Translate[26] = "¿À·ù: ÇÏ³ª ÀÌ»óÀÇ µð·ºÅä¸®¿¡ Á¢±ÙÇÒ ¼ö ¾ø½À´Ï´Ù.";
+// System messages
+$Translate[20] = "ì‚¬ìš©ìž IDë‚˜ ì•”í˜¸ë¥¼ ìž˜ëª» ì„ íƒí•˜ì˜€ìŠµë‹ˆë‹¤.";
+$Translate[21] = "ì•”í˜¸ê°€ ì •í™•í•˜ì§€ ì•Šìœ¼ë¯€ë¡œ, ë³€ê²½í•œ ì‚¬í•­ì„ ì €ìž¥í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.";
+$Translate[22] = "ì•”í˜¸ëŠ” ì œì™¸í•˜ê³  ë‚˜ë¨¸ì§€ë§Œ ì €ìž¥í•©ë‹ˆë‹¤.";
+$Translate[23] = "ê°’ì„ ì €ìž¥í•˜ì˜€ìŠµë‹ˆë‹¤.";
+$Translate[24] = "ë‹¤ìŒì˜ ftp ì‚¬ìš©ìž, ";
+$Translate[25] = "ë¥¼(ì„) ì‚­ì œí•˜ê² ìŠµë‹ˆë‹¤";
+$Translate[26] = "ì˜¤ë¥˜: í•˜ë‚˜ ì´ìƒì˜ ë””ë ‰í† ë¦¬ì— ì ‘ê·¼í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.";
 
-  // Labels
-  $Translate[30] = "·Î±×ÀÎ ÆäÀÌÁö";
-  $Translate[31] = "»õ·Î¿î »ç¿ëÀÚ";
-  $Translate[32] = "»ç¿ëÀÚ ID";
-  $Translate[33] = "Uid";
-  $Translate[34] = "Gid";
-  $Translate[35] = "È¨µð·ºÅä¸®";
-  $Translate[36] = "¾÷·Îµå ´ë¿ªÆø";
-  $Translate[37] = "´Ù¿î·Îµå ´ë¿ªÆø";
-  $Translate[38] = "IP ÁÖ¼Ò";
-  $Translate[39] = "¼³Á¤";
-  $Translate[40] = "È°¼º";
-  $Translate[41] = "¾ÏÈ£";
-  $Translate[42] = "¾ÏÈ£ È®ÀÎ";
-  $Translate[43] = "ÇÒ´ç ÆÄÀÏ°¹¼ö";
-  $Translate[44] = "ÇÒ´ç Å©±â";
-  $Translate[45] = "¾÷·Îµå:´Ù¿î·Îµå ºñÀ²";
-  $Translate[46] = "¸Þ¸ð";
+// Labels
+$Translate[30] = "ë¡œê·¸ì¸ íŽ˜ì´ì§€";
+$Translate[31] = "ìƒˆë¡œìš´ ì‚¬ìš©ìž";
+$Translate[32] = "ì‚¬ìš©ìž ID";
+$Translate[33] = "Uid";
+$Translate[34] = "Gid";
+$Translate[35] = "í™ˆë””ë ‰í† ë¦¬";
+$Translate[36] = "ì—…ë¡œë“œ ëŒ€ì—­í­";
+$Translate[37] = "ë‹¤ìš´ë¡œë“œ ëŒ€ì—­í­";
+$Translate[38] = "IP ì£¼ì†Œ";
+$Translate[39] = "ì„¤ì •";
+$Translate[40] = "í™œì„±";
+$Translate[41] = "ì•”í˜¸";
+$Translate[42] = "ì•”í˜¸ í™•ì¸";
+$Translate[43] = "í• ë‹¹ íŒŒì¼ê°¯ìˆ˜";
+$Translate[44] = "í• ë‹¹ í¬ê¸°";
+$Translate[45] = "ì—…ë¡œë“œ:ë‹¤ìš´ë¡œë“œ ë¹„ìœ¨";
+$Translate[46] = "ë©”ëª¨";
 
-  // Button info
-  $Translate[60] = "ÆíÁý";
-  $Translate[61] = "Á¦°Å";
-  $Translate[62] = "Àá±×±â";
-  $Translate[63] = "Ç®±â";
-  $Translate[64] = "¿­±â";
-  $Translate[65] = "µð·ºÅä¸® Å½»ö±â ¿­±â.";
-  $Translate[66] = "µð·ºÅä¸® Å½»ö±â ´Ý±â";
-  $Translate[67] = "ÀúÀå";
+// Button info
+$Translate[60] = "íŽ¸ì§‘";
+$Translate[61] = "ì œê±°";
+$Translate[62] = "ìž ê·¸ê¸°";
+$Translate[63] = "í’€ê¸°";
+$Translate[64] = "ì—´ê¸°";
+$Translate[65] = "ë””ë ‰í† ë¦¬ íƒìƒ‰ê¸° ì—´ê¸°.";
+$Translate[66] = "ë””ë ‰í† ë¦¬ íƒìƒ‰ê¸° ë‹«ê¸°";
+$Translate[67] = "ì €ìž¥";
 
-  // Attributes from the directory browser
-  $Translate[80] = "ÀÌ¸§";
-  $Translate[81] = "Å©±â";
-  $Translate[82] = "À¯Çü";
-  $Translate[83] = "ÃÖÁ¾¼öÁ¤ÀÏ";
-  $Translate[84] = "¼ÒÀ¯ÀÚ";
-  $Translate[85] = "±×·ì";
-  $Translate[86] = "¼Ó¼º";
+// Attributes from the directory browser
+$Translate[80] = "ì´ë¦„";
+$Translate[81] = "í¬ê¸°";
+$Translate[82] = "ìœ í˜•";
+$Translate[83] = "ìµœì¢…ìˆ˜ì •ì¼";
+$Translate[84] = "ì†Œìœ ìž";
+$Translate[85] = "ê·¸ë£¹";
+$Translate[86] = "ì†ì„±";
 
-  // Help balloons
-  $Translate[90] = "°èÁ¤À» »ç¿ëÇÏ·Á¸é ²À È°¼º ¹öÆ°À» Ã¼Å©ÇÏ¿©¾ß ÇÕ´Ï´Ù.";
-  $Translate[91] = "º» ftp °èÁ¤ÀÇ »ç¿ëÀÚ ±ÇÇÑÀº ½© °èÁ¤ÀÇ »ç¿ëÀÚ ±ÇÇÑ°ú µ¿ÀÏÇÕ´Ï´Ù.";
-  $Translate[92] = "º» ftp °èÁ¤ÀÇ ±×·ì ±ÇÇÑÀº ½© °èÁ¤ÀÇ ±×·ì ±ÇÇÑ°ú µ¿ÀÏÇÕ´Ï´Ù.";
-  $Translate[93] = "»ç¿ëÀÚÀÇ ÃÖ´ë ¾÷·Îµå ¼Óµµ¸¦ KB/s ´ÜÀ§·Î ÁöÁ¤ÇÕ´Ï´Ù.";
-  $Translate[94] = "»ç¿ëÀÚÀÇ ÃÖ´ë ´Ù¿î·Îµå ¼Óµµ¸¦ KB/s ´ÜÀ§·Î ÁöÁ¤ÇÕ´Ï´Ù.";
-  $Translate[95] = "»ç¿ëÀÚÀÇ °èÁ¤ µð·ºÅä¸® ³»¿¡ ÀúÀåÇÒ ¼ö ÀÖ´Â ÆÄÀÏÀÇ ÃÖ´ë °¹¼ö¸¦ Á¦ÇÑÇÕ´Ï´Ù.";
-  $Translate[96] = "»ç¿ëÀÚÀÇ °èÁ¤ µð·ºÅä¸® ³»¿¡ ÀúÀåÇÒ ¼ö ÀÖ´Â ÆÄÀÏÀÇ ÀüÃ¼ Å©±â(Mb)¸¦ Á¦ÇÑÇÕ´Ï´Ù.";
-  $Translate[97] = "¿¹¸¦ µé¾î, <1:2>·Î ÁöÁ¤ÇÑ °æ¿ì ¸ÕÀú 4Mb¸¦ ¾÷·Î±× ÇÏ¿©¾ß 8Mb¸¦ ´Ù¿î·Îµå ¹ÞÀ» ¼ö ÀÖ½À´Ï´Ù. <0:0>À¸·Î ¼³Á¤ÇÏ¸é ÀÌ ±â´ÉÀ» »ç¿ëÇÏÁö ¾Ê½À´Ï´Ù.";
-  $Translate[98] = "Á¢¼ÓÇÒ IP ÁÖ¼Ò¸¦ Á¦ÇÑÇÕ´Ï´Ù. Æ¯Á¤ IP ÁÖ¼Ò¸¦ ÀÔ·ÂÇÏ°Å³ª ¸ðµç IP¸¦ Çã¿ëÇÏ·Á¸é *¸¦ ÀÔ·ÂÇÕ´Ï´Ù.";
-
-?>
+// Help balloons
+$Translate[90] = "ê³„ì •ì„ ì‚¬ìš©í•˜ë ¤ë©´ ê¼­ í™œì„± ë²„íŠ¼ì„ ì²´í¬í•˜ì—¬ì•¼ í•©ë‹ˆë‹¤.";
+$Translate[91] = "ë³¸ ftp ê³„ì •ì˜ ì‚¬ìš©ìž ê¶Œí•œì€ ì‰˜ ê³„ì •ì˜ ì‚¬ìš©ìž ê¶Œí•œê³¼ ë™ì¼í•©ë‹ˆë‹¤.";
+$Translate[92] = "ë³¸ ftp ê³„ì •ì˜ ê·¸ë£¹ ê¶Œí•œì€ ì‰˜ ê³„ì •ì˜ ê·¸ë£¹ ê¶Œí•œê³¼ ë™ì¼í•©ë‹ˆë‹¤.";
+$Translate[93] = "ì‚¬ìš©ìžì˜ ìµœëŒ€ ì—…ë¡œë“œ ì†ë„ë¥¼ KB/s ë‹¨ìœ„ë¡œ ì§€ì •í•©ë‹ˆë‹¤.";
+$Translate[94] = "ì‚¬ìš©ìžì˜ ìµœëŒ€ ë‹¤ìš´ë¡œë“œ ì†ë„ë¥¼ KB/s ë‹¨ìœ„ë¡œ ì§€ì •í•©ë‹ˆë‹¤.";
+$Translate[95] = "ì‚¬ìš©ìžì˜ ê³„ì • ë””ë ‰í† ë¦¬ ë‚´ì— ì €ìž¥í•  ìˆ˜ ìžˆëŠ” íŒŒì¼ì˜ ìµœëŒ€ ê°¯ìˆ˜ë¥¼ ì œí•œí•©ë‹ˆë‹¤.";
+$Translate[96] = "ì‚¬ìš©ìžì˜ ê³„ì • ë””ë ‰í† ë¦¬ ë‚´ì— ì €ìž¥í•  ìˆ˜ ìžˆëŠ” íŒŒì¼ì˜ ì „ì²´ í¬ê¸°(Mb)ë¥¼ ì œí•œí•©ë‹ˆë‹¤.";
+$Translate[97] = "ì˜ˆë¥¼ ë“¤ì–´, <1:2>ë¡œ ì§€ì •í•œ ê²½ìš° ë¨¼ì € 4Mbë¥¼ ì—…ë¡œê·¸ í•˜ì—¬ì•¼ 8Mbë¥¼ ë‹¤ìš´ë¡œë“œ ë°›ì„ ìˆ˜ ìžˆìŠµë‹ˆë‹¤. <0:0>ìœ¼ë¡œ ì„¤ì •í•˜ë©´ ì´ ê¸°ëŠ¥ì„ ì‚¬ìš©í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.";
+$Translate[98] = "ì ‘ì†í•  IP ì£¼ì†Œë¥¼ ì œí•œí•©ë‹ˆë‹¤. íŠ¹ì • IP ì£¼ì†Œë¥¼ ìž…ë ¥í•˜ê±°ë‚˜ ëª¨ë“  IPë¥¼ í—ˆìš©í•˜ë ¤ë©´ *ë¥¼ ìž…ë ¥í•©ë‹ˆë‹¤.";

@@ -5,7 +5,7 @@
 
   // 全域設定 (Global)
   $Translate[0]  = "PureFTPd 帳號管理";
-  $Translate[1]  = "Version 2.2";
+  $Translate[1]  = "Version 2.5";
 
   // 預設的帳號 (Default username) 
   $Translate[10] = "myftp";
@@ -67,5 +67,3 @@
   $Translate[96] = "限制此帳號所能存放的(最多的)空間大小。(單位: Mb)";
   $Translate[97] = "比如 <1:2> 代表的是: 至少先上傳 4Mb 才能下載 8Mb，而 <0:0> 則是關閉上下傳比限制";
   $Translate[98] = "限制此帳號只能由特定 IP 來源，或是任何地方均可使用 (*)";
-
-?>

@@ -1,6 +1,6 @@
 -- This mysql script is made by M.Mastenbroek 2002 - 2017
 -- For more info look at http://machiel.generaal.net
--- Version 2.2
+-- Version 2.5
 --
 -- You don't need this script when you already have the database
 -- or when you use the install.php configuration script successfully.
@@ -38,7 +38,7 @@ USE ftpusers;
 
 CREATE TABLE admin (
   Username varchar(35) NOT NULL default '',
-  Password char(32) binary NOT NULL default '',
+  Password char(256) binary NOT NULL default '',
   PRIMARY KEY  (Username)
 ) TYPE=MyISAM;
 
@@ -55,7 +55,7 @@ INSERT INTO admin VALUES ('Administrator',MD5('tmppasswd'));
 
 CREATE TABLE `users` (
   `User` varchar(16) NOT NULL default '',
-  `Password` varchar(32) binary NOT NULL default '',
+  `Password` varchar(256) binary NOT NULL default '',
   `Uid` int(11) NOT NULL default '14',
   `Gid` int(11) NOT NULL default '5',
   `Dir` varchar(128) NOT NULL default '',
