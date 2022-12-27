@@ -1,6 +1,7 @@
 Version 2.5 (25-12-2022)
 
 - PHP8 compatibility
+- Password encryption configurable. Added password hashing methods: cleartext, md5, bcrypt, sha255-crypt, sha512-crypt
 
 Version 2.2 (1-4-2017)
 

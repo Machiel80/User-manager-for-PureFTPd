@@ -54,8 +54,8 @@ INSERT INTO admin VALUES ('Administrator',MD5('tmppasswd'));
 --
 
 CREATE TABLE `users` (
-  `User` varchar(16) NOT NULL default '',
-  `Password` varchar(256) binary NOT NULL default '',
+  `User` varchar(255) NOT NULL default '',
+  `Password` varchar(255) binary NOT NULL default '',
   `Uid` int(11) NOT NULL default '14',
   `Gid` int(11) NOT NULL default '5',
   `Dir` varchar(128) NOT NULL default '',
