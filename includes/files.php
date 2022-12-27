@@ -1,5 +1,5 @@
 <?php
-/* 'User manager for PureFTPd' is made by M.Mastenbroek 2002 - 2017, dnsb 2022
+/* User manager for PureFTPd is made by M.Mastenbroek 2002 - 2017, dnsb 2022
  *  For more info look at http://machiel.generaal.net
  *  Version 2.5
  */
@@ -332,16 +332,16 @@ class directorylist {
 
 		// echo ("\$order = $order<br>\n");
 		if ($lvalue=='size') {
-			$this->multisort($this->directorylist, "name", $order);
-			$this->multisort($this->filelist, "size", $order);
+			$this->sortlist($this->directorylist, "name", $order);
+			$this->sortlist($this->filelist, "size", $order);
 		} else { 	// name, owner, group, modify
-			$this->multisort($this->directorylist, $lvalue, $order);
-			$this->multisort($this->filelist, $lvalue, $order);
+			$this->sortlist($this->directorylist, $lvalue, $order);
+			$this->sortlist($this->filelist, $lvalue, $order);
 		}
 
 	}
 
-	function multisort(&$FileArray, $key, $order) {
+	function sortlist(&$FileArray, $key, $order) {
 		switch ($key) {
 			case 'size':
 				uasort($FileArray, 'filesort_size_cmp' );
@@ -363,7 +363,6 @@ class directorylist {
 			$FileArray = array_reverse($FileArray);
 		}
 		$FileArray = array_values($FileArray);
-		error_log(json_encode($FileArray));
 	}
 
 }

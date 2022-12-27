@@ -16,6 +16,7 @@ require('config.php');
 require('includes/files.php');
 require('language/index.php');
 require('includes/sql.php');
+require('includes/password.php');
 
 if (!isset($_SESSION['Login']) || $_SESSION['Login'] != '1') {
 	include("includes/login.php");
@@ -244,11 +245,15 @@ if (!isset($_SESSION['Login']) || $_SESSION['Login'] != '1') {
 			$iCounter++;
 		}
 
+		if ($valid_password == 1) {
+			$hashed_password = hash_password($FTPPasswordEncryption, $password);
+		}
+
 		if ($iExistUser == 1) {
 
 			//  update current ftp account
 			if ($valid_password == 0) {
-				echo("<script language=\"JavaScript\" type=\"text/javascript\">\n");
+				echo("<script type=\"text/javascript\">\n");
 				echo("<!--\n\n");
 				echo("  alert(\"".$Translate[21]."\");\n\n");
 				echo("-->\n");
@@ -257,7 +262,7 @@ if (!isset($_SESSION['Login']) || $_SESSION['Login'] != '1') {
 				if ($empty_password == 1) // update without password
 				{
 
-					echo("<script language=\"JavaScript\" type=\"text/javascript\">\n");
+					echo("<script type=\"text/javascript\">\n");
 					echo("<!--\n\n");
 					echo("  alert(\"".$Translate[22]."\");\n\n");
 					echo("-->\n");
@@ -288,7 +293,7 @@ if (!isset($_SESSION['Login']) || $_SESSION['Login'] != '1') {
 				} else {
 
 					$query_string = "UPDATE users SET ".
-							"Password='".md5($password)."',
+							"Password='".$hashed_password."',
 						 Uid='".$uid."',
 						 Gid='".$gid."',
 						 Dir='".$dir."',
@@ -310,7 +315,7 @@ if (!isset($_SESSION['Login']) || $_SESSION['Login'] != '1') {
 						echo("<br>MySql error : ".sql_error($link));
 
 					} else {
-						echo("<script language=\"JavaScript\" type=\"text/javascript\">\n");
+						echo("<script type=\"text/javascript\">\n");
 						echo("<!--\n\n");
 						echo("  alert(\"".$Translate[23]."\");\n\n");
 						echo("-->\n");
@@ -322,7 +327,7 @@ if (!isset($_SESSION['Login']) || $_SESSION['Login'] != '1') {
 
 			// Create new User
 			if ($valid_password == 0 || $empty_password == 1) {
-				echo("<script language=\"JavaScript\" type=\"text/javascript\">\n");
+				echo("<script type=\"text/javascript\">\n");
 				echo("<!--\n\n");
 				echo("  alert(\"".$Translate[21]."\");\n\n");
 				echo("-->\n");
@@ -331,7 +336,7 @@ if (!isset($_SESSION['Login']) || $_SESSION['Login'] != '1') {
 			} else {
 				$query_string = "INSERT INTO users (User,Password,Uid,Gid,Dir,QuotaFiles,QuotaSize,ULBandwidth,DLBandwidth,ULRatio,dLRatio,Status,Ipaddress,Comment)
 					VALUES ('".$user."',
-					        '".md5($password)."',
+					        '".$hashed_password."',
 					        '".$uid."',
 					        '".$gid."',
 					        '".$dir."',
@@ -384,18 +389,18 @@ if (!isset($_SESSION['Login']) || $_SESSION['Login'] != '1') {
 		$_GET['id'] = $_GET['username_box'];
 	}
 
-	echo("<html>\n");
+	echo("<html lang='en'>\n");
 	echo("<head>\n");
 	echo("<title>".$Translate[0]." (".$Translate[1].")</title>\n");
 	echo("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=$CharSet\">\n");
-	echo("<meta name=\"description\" content=\"The �User manager for PureFTPd� is a software project from Machiel Mastenbroek,");
+	echo("<meta name=\"description\" content=\"The 'User manager for PureFTPd' is a software project from Machiel Mastenbroek,");
 	echo(" more information about this free software could be found on my website: http://machiel.generaal.net/index.php?subject=user_manager_pureftpd \">\n");
 	echo/** @lang html */
 	("<link rel=\"stylesheet\" href=\"$StyleSheet\" type=\"text/css\" />\n");
 	echo("</head>\n");
 	echo("<body bgcolor=\"#FFFFFF\" text=\"#000000\" link=\"#000000\" onLoad=\"loadScroll()\" onUnload=\"saveScroll()\">\n");
 
-	echo("<script language=\"JavaScript\" type=\"text/javascript\">\n");
+	echo("<script type=\"text/javascript\">\n");
 	echo("<!--\n\n");
 	echo("  function danger_popup(user,urlv)\n");
 	echo("  {\n");
@@ -473,7 +478,7 @@ if (!isset($_SESSION['Login']) || $_SESSION['Login'] != '1') {
 	echo("</td>\n");
 	echo("<td align=\"right\">");
 	echo("<a href=\"$_SERVER[PHP_SELF]?new=1\">");
-	echo("<img hspace=\"1\" src=\"$LocationImages/new_ftpuser.gif\" width=\"16\" height=\"21\" align=\"middle\" border=\"0\">");
+	echo("<img hspace=\"1\" src=\"$LocationImages/new_ftpuser.gif\" width=\"16\" height=\"21\" align=\"middle\" border=\"0\" alt=\"New\">");
 	echo("<font style=\"vertical-align:middle\">&nbsp;".$Translate[31]."&nbsp;</font></a>");
 	echo("</td>\n");
 	echo("</tr>\n");
@@ -522,9 +527,9 @@ if (!isset($_SESSION['Login']) || $_SESSION['Login'] != '1') {
 
 		// Lock or unlock account
 		if ($row_status == 1)
-			echo("<img src=\"$LocationImages/ftpuser.gif\" width=\"16\" height=\"18\" border=\"0\" style=\"margin:0px 0px 4px ; vertical-align:middle\">");
+			echo("<img src=\"$LocationImages/ftpuser.gif\" width=\"16\" height=\"18\" border=\"0\" style=\"margin:0px 0px 4px ; vertical-align:middle\" alt=\"Active\">");
 		else
-			echo("<img src=\"$LocationImages/ftpuser_gray.gif\" width=\"16\" height=\"18\" border=\"0\" style=\"margin:0px 0px 4px ; vertical-align:middle\">");
+			echo("<img src=\"$LocationImages/ftpuser_gray.gif\" width=\"16\" height=\"18\" border=\"0\" style=\"margin:0px 0px 4px ; vertical-align:middle\" alt=\"Disabled\">");
 
 		echo("<input class=\"name\" value=\"$row_user\" name=\"textfield\" type=\"text\">");
 
@@ -761,7 +766,7 @@ if (!isset($_SESSION['Login']) || $_SESSION['Login'] != '1') {
 	if ($_SESSION['dirbrowser'] == 1) {
 		echo("<tr class=\"edit_user\">\n");
 
-		echo("<td class=\"border_ltb\"width=\"$small_area\">&nbsp;</td>\n");
+		echo("<td class=\"border_ltb\" width=\"$small_area\">&nbsp;</td>\n");
 		echo("<td class=\"border_lrtb\" colspan=\"2\" bgcolor=\"#FFFFFF\">\n");
 
 		echo("<div id=\"dirbrowser_layer\" style=\"position:relative; width:100%; height:300px; z-index:1; left: 0px; top: 0px; overflow: auto\">\n");
@@ -950,7 +955,7 @@ if (!isset($_SESSION['Login']) || $_SESSION['Login'] != '1') {
 	echo("<td class=\"border_ltb\" valign=\"top\" width=\"$small_area\">".$Translate[46]."</td>\n");
 	echo("<td class=\"border_lrtb\" width=\"$large_area\">\n");
 	echo("<table width=\"100%\"><tr><td>");
-	echo("<textarea name=\"comment_box\" cols=\"30\" rows=\"3\" wrap=\"virtual\">".$comment."</textarea>");
+	echo("<textarea name=\"comment_box\" cols=\"30\" rows=\"3\" wrap=\"soft\">".$comment."</textarea>");
 	echo("</td></tr></table>");
 	echo("</td>\n");
 	echo("<td class=\"border_r\" colspan=\"2\">\n&nbsp;</td>");

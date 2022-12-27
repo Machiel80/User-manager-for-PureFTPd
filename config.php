@@ -17,6 +17,8 @@ $DBDatabase = "ftpusers";           // Name of database
 
 $FTPAddress = "10.10.128.172:21";   // Domain name or ip-address of your ftp server
 
+$FTPPasswordEncryption = "bcrypt";	// cleartext, md5, bcrypt, sha255-crypt, sha512-crypt
+
 $DEFUserID = "65534"; // nobody     // Default user id of virtual ftp user.
 
 $DEFGroupID = "31";   // guest      // Default group is of virtual ftp user.
