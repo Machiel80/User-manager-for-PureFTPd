@@ -23,14 +23,14 @@ class directory_element {
 	var $Description;
 
 	// constructor
-	function directory_element($dePath, $deName) {
+	function __construct($dePath, $deName) {
 
 		global $Extensions, $Icons;
 
 		if (!is_string($dePath) ||
 				!is_string($deName) ||
 				!file_exists($dePath.$deName)) {
-			return false;
+			return;
 		}
 
 		$this->Path = $dePath.$deName;
@@ -91,7 +91,7 @@ class directory_element {
 		}
 
 		$this->Name = preg_replace('/&[^amp;]/', '&amp;', $this->Name);
-		return true;
+		return;
 	}
 
 	function GetElement() {
@@ -246,7 +246,7 @@ class directorylist {
 	var $error;
 
 	// constructor
-	function directorylist($Directory) {
+	function __construct($Directory) {
 
 		$this->directorylistsize = 0;
 		$this->filelistsize = 0;
@@ -268,7 +268,7 @@ class directorylist {
 			if ($Directory == "/" || $Directory == "//") {
 				// echo ("<font color='red'>Error:</font> Can't open directory $Directory<br>\n");
 				$this->error = $this->error."Can't open directory $Directory ";
-				return false;
+				return;
 			}
 		}
 
@@ -296,7 +296,7 @@ class directorylist {
 
 		$this->order("Name", "Asc");
 
-		return true;
+		return;
 	}
 
 	function directory_element($deNumber) {
